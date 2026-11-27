@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>揭阳炸街广场 · 摩托车炸街扰民事件与处置公开记录</title>
+<meta name="description" content="持续记录揭阳摩托车「炸街」扰民的公开报道与官方处置，附各地治理做法与法规标准参考。每条记录注明出处，不收录未经核实的信息。">
+<style>
+  :root{
+    --bg:#0e1116; --panel:#161b22; --panel2:#1c232e; --line:#2a323e;
+    --text:#e6e9ee; --muted:#9aa7b4; --faint:#6b7885;
+    --accent:#e8b13c; --red:#e5534b; --green:#3fb27f; --blue:#58a6ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.65;font-size:16px}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:860px;margin:0 auto;padding:0 16px 64px}
+  header{padding:36px 0 8px;text-align:center}
+  header h1{font-size:30px;letter-spacing:.12em;font-weight:800}
+  header h1 .dot{color:var(--accent)}
+  header .sub{color:var(--muted);font-size:14px;margin-top:8px}
+  .counters{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:26px 0 6px}
+  .counter{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 22px;min-width:150px;text-align:center}
+  .counter .num{font-size:34px;font-weight:800;line-height:1.1}
+  .counter .lbl{color:var(--muted);font-size:13px;margin-top:4px;letter-spacing:.08em}
+  .counter.red .num{color:var(--red)}
+  .counter.green .num{color:var(--green)}
+  .cnote{text-align:center;color:var(--faint);font-size:12.5px;margin-bottom:8px}
+  section{margin-top:38px}
+  h2{font-size:19px;font-weight:700;border-left:4px solid var(--accent);padding-left:10px;margin-bottom:6px}
+  .secdesc{color:var(--muted);font-size:13.5px;margin-bottom:16px;padding-left:14px}
+  .timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:20px}
+  .ev{position:relative;padding:14px 0 18px;border-bottom:1px dashed var(--line)}
+  .ev:last-child{border-bottom:none}
+  .ev::before{content:"";position:absolute;left:-27px;top:22px;width:10px;height:10px;border-radius:50%;background:var(--faint);border:2px solid var(--bg)}
+  .ev.t-处置::before{background:var(--green)}
+  .ev.t-事件::before{background:var(--red)}
+  .ev.t-反馈::before{background:var(--blue)}
+  .ev.t-线索::before{background:var(--accent)}
+  .ev .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+  .tag{font-size:12px;padding:1px 8px;border-radius:20px;border:1px solid var(--line);background:var(--panel2)}
+  .tag.处置{color:var(--green);border-color:#24503c}
+  .tag.事件{color:var(--red);border-color:#5c2b28}
+  .tag.反馈{color:var(--blue);border-color:#274a75}
+  .tag.线索{color:var(--accent);border-color:#5c4a1e}
+  .ev h3{font-size:16.5px;margin:6px 0 4px;font-weight:700}
+  .ev p{color:#c9d1d9;font-size:14.5px}
+  .ev .src{font-size:12.5px;color:var(--faint);margin-top:6px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:12px}
+  .card h3{font-size:15.5px;margin-bottom:6px}
+  .card p,.card li{color:#c9d1d9;font-size:14.5px}
+  .card ul{padding-left:20px}
+  .card li{margin:3px 0}
+  .kv{display:grid;grid-template-columns:110px 1fr;gap:4px 12px;font-size:14.5px}
+  .kv dt{color:var(--muted)}
+  .kv dd{color:#c9d1d9}
+  .empty{color:var(--faint);text-align:center;padding:22px 0;font-size:14px}
+  .heatrow{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .heatrow:last-child{border-bottom:none}
+  .heatrow .hn{font-weight:700;font-size:15.5px}
+  .heatrow .hc{font-weight:800;font-size:20px;color:var(--accent)}
+  .heatrow .bar{grid-column:1/-1;height:8px;background:var(--panel2);border-radius:4px;overflow:hidden}
+  .heatrow .bar i{display:block;height:100%;background:var(--red);border-radius:4px}
+  .heatrow .hs{grid-column:1/-1;color:var(--faint);font-size:12.5px}
+  table.ledger{width:100%;border-collapse:collapse;font-size:14px}
+  table.ledger th,table.ledger td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+  table.ledger th{background:var(--panel2);color:var(--muted);font-weight:600;white-space:nowrap}
+  table.ledger td{color:#c9d1d9}
+  .twrap{overflow-x:auto}
+  pre.tpl{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:13.5px;line-height:1.7;white-space:pre-wrap;word-break:break-all;color:#c9d1d9;font-family:inherit}
+  .cpbtn{margin-top:10px;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:7px 16px;font-size:13.5px;cursor:pointer}
+  .cpbtn:hover{border-color:var(--accent)}
+  .stmt{border-left:4px solid var(--blue);background:var(--panel);border-radius:0 10px 10px 0;padding:16px 18px}
+  .stmt p{color:#c9d1d9;font-size:14.5px;margin-bottom:8px}
+  .stmt p:last-child{margin-bottom:0}
+  .stmt .four{font-weight:800;color:var(--text)}
+  footer{margin-top:48px;border-top:1px solid var(--line);padding-top:16px;color:var(--faint);font-size:12.5px;text-align:center}
+  @media (max-width:560px){
+    header h1{font-size:25px}
+    .counter{min-width:128px;padding:13px 14px}
+    .counter .num{font-size:28px}
+    .kv{grid-template-columns:92px 1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>揭阳炸街广场<span class="dot">·</span></h1>
+  <p class="sub">摩托车「炸街」扰民 · 事件与处置公开记录<br>只收录有公开出处的记录，注明来源与日期；不点名、不曝光个人。</p>
+  <div class="counters">
+    <div class="counter red"><div class="num" id="cEvents">–</div><div class="lbl">已记录事件 · 条</div></div>
+    <div class="counter green"><div class="num" id="cActions">–</div><div class="lbl">已有官方处置 · 条</div></div>
+  </div>
+  <p class="cnote">计数口径：事件＝本页时间线全部条目；官方处置＝其中交警/公安已作出查处、拘留等处理结果的条目。数字随条目增减，无出处不入账。</p>
+</header>
+
+<section id="statement">
+  <h2>当事人自述</h2>
+  <p class="secdesc">本节为当事人自述，是本站的立站缘由；自述内容均有当事人留存的工单编号、短信与书面材料可查（原件含实名信息，不在本页公开）。站内其他板块只收录有公开出处的记录。</p>
+  <div class="stmt">
+    <p>本站源于一名榕城区居民的投诉经历。她住在榕城区人和大道真理中学对面、北河大桥一带，长期受夜间摩托车「炸街」困扰——据其记录，每晚 21:00 至次日凌晨 2:30，几乎每晚如此。为投诉这件事，她整整奔走了一个月，而且每一步都留了痕：</p>
+    <p><strong>2026-10-26</strong>：她在抖音发帖反映北河大桥一带每晚炸街（定位进贤门城楼），一周内浏览 7.4 万次；评论区多名本地居民印证，还点出建阳路、揭阳大桥、政务中心东湖路等其他点位。</p>
+    <p><strong>2026-10-26 至 11-01</strong>：一周内她合计联系警方 10 次（110 三次、122 两次、直接致电交警中队四次、投诉一次），另拨打揭阳 12345 共 7 次。有一次反馈称警力「将到场查看」，她在楼上自始至终未见任何警车到场；两次接警言行被她记下：一次接警人员仅给出一个邮箱地址、她发去材料后便再无下文，另一次接警人员以「你去告吧」一类的话应付。</p>
+    <p><strong>2026-11-02</strong>：她把书面《陈述与举报》和 20 页《证据材料汇编》（含夜间噪声视频及校验值、通话记录、评论截图）正式递交揭阳市公安局交警支队、警务督察支队，抄送广东省公安厅，同步通过 12389、12388 反映。同日，省纪委监委信访渠道回复：已收悉，请向有权处理的机关提出。</p>
+    <p><strong>2026-11-04</strong>：广东省 12345 就工单 0826110416360455724901 回复：诉求已转派揭阳市；其中对公安民警失职行为的投诉不属 12345 受理范围，请拨 12389 或 110。</p>
+    <p><strong>2026-11-05</strong>：揭阳交警以短信回复她：所反映情况已知悉，交警部门将加强巡逻管控。此后无任何个案处置结果告知。</p>
+    <p><strong>2026-11-16、11-25</strong>：揭阳 12345 又受理两张新工单（0826111615555797101、0826112522101766801）。<strong>11-17</strong>，省 12345 工单 2326110222290144575401 的标题干脆写着：「真理中学周边摩托车炸街，多次反映 12345 未见处置」。她的通话记录显示，直到 11 月下旬，她仍在打 110、122、12345。</p>
+    <p>这一个月里，她发出的投诉邮件全部被退信；她本人两次进了派出所；最后差点被刑事拘留的，反而是投诉的她自己。而揭阳交警早在 2026-10-26 就发布了「严管严控三个月」专项行动、市政府通告称对飙车炸街依法顶格处理——部署在纸面上，落实无人告知。</p>
+    <p>对这一个月的经历，她的定性只有四个字：<span class="four">地方不作为</span>。</p>
+    <p>正因为正规渠道走了一个月走不通，才有这个公开记录站——把每一次事件、每一次处置，都记在明处。</p>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2>事件时间线</h2>
+  <p class="secdesc">按时间倒序（日期不详的条目置于末尾并明确标注）。每条含时间、地点（到路段/区域）、现象或案情、来源链接。地点未公开的如实标注「未公布」；「线索」类为仅有标题可考的弱证据，不计入官方处置数。</p>
+  <div class="timeline" id="timelineList"></div>
+</section>
+
+<section id="actions">
+  <h2>官方处置与反馈</h2>
+  <p class="secdesc">只列官方已公布的查处结果与治理动作，与时间线同一批数据，按「处置 / 反馈」标签区分。</p>
+  <div id="actionList"></div>
+</section>
+
+<section id="heat">
+  <h2>噪声扰民热力榜</h2>
+  <p class="secdesc">仿成都「噪声扰民热力图」的做法，按地点汇总本站已记录条目：热度＝该地点已记录条目数。本榜仅基于已公开记录统计，不是实时监测；记录少不等于扰民少，只说明公开记录少。</p>
+  <div class="card">
+    <div class="heatrow">
+      <span class="hn">揭阳市（具体路段未公布）</span><span class="hc">4 条</span>
+      <span class="bar"><i style="width:100%"></i></span>
+      <span class="hs">来源条目：2026-10-16 处置、2026-10-21 反馈、2026-10-23 处置（三条均为二手来源，原始通报未检索到）；2026-10-26 反馈为全市「严管严控三个月」专项部署，无具体路段，一并计入本行</span>
+    </div>
+    <div class="heatrow">
+      <span class="hn">普宁市城区（主干道、商圈、居民区一带）</span><span class="hc">1 条</span>
+      <span class="bar"><i style="width:25%"></i></span>
+      <span class="hs">来源条目：2026-11-04 处置（深夜专项整治，行拘 7 人、打掉团伙 1 个；揭阳新闻网发布普宁公安交管大队通报，一手来源）</span>
+    </div>
+    <div class="heatrow">
+      <span class="hn">榕城区临江北路</span><span class="hc">1 条</span>
+      <span class="bar"><i style="width:25%"></i></span>
+      <span class="hs">来源条目：日期不详 事件（媒体点名「鬼火少年」深夜出没扰民，二手来源，无正文与日期可核）</span>
+    </div>
+    <div class="heatrow">
+      <span class="hn">榕城区老城区</span><span class="hc">1 条</span>
+      <span class="bar"><i style="width:25%"></i></span>
+      <span class="hs">来源条目：2026-10-31 事件（居民公开反映夜间高频炸街，二手来源）</span>
+    </div>
+    <div class="heatrow">
+      <span class="hn">普宁市里湖镇</span><span class="hc">1 条</span>
+      <span class="bar"><i style="width:25%"></i></span>
+      <span class="hs">来源条目：2024-04-18 线索（视频标题显示警方口径处置内容，线索级弱证据：仅标题可考、正文无法核验）</span>
+    </div>
+    <div class="heatrow">
+      <span class="hn">榕城区西湖公园附近</span><span class="hc">1 条</span>
+      <span class="bar"><i style="width:25%"></i></span>
+      <span class="hs">来源条目：2024-04-03 处置（飙车致伤案，9 人刑拘；广东省公安厅典型案例，一手来源）</span>
+    </div>
+    <p style="color:var(--faint);font-size:12.5px;margin-top:10px">注：北河大桥一带（真理中学对面）已有当事人一手证据存档（2026-11-02 正式书面举报及 20 页证据汇编），但属当事人一手文档、非公开报道，本榜只统计公开记录，故不计入本榜条数；已列入下方台账并注明区别。</p>
+  </div>
+</section>
+
+<section id="ledger">
+  <h2>重点路段台账</h2>
+  <p class="secdesc">仿成都对易发车辆「建台账管理」的做法，但本站只对路段与时段建台账，不记车辆、不记个人。数据与时间线同一批条目、同一口径。</p>
+  <div class="card twrap">
+    <table class="ledger">
+      <tr><th>路段 / 区域</th><th>已记录事件数</th><th>高发时段</th><th>已有处置</th></tr>
+      <tr><td>揭阳市（具体路段未公布）</td><td>4</td><td>未公布（部署口径为夜间、凌晨）</td><td>行政拘留 2 起（2026-10-16、2026-10-23）；源头宣传反馈 1 次（2026-10-21 俱乐部座谈＋门店走访），均为二手来源。另有 2026-10-26 全市道路交通秩序「严管严控三个月」专项行动部署（反馈类，非查处结果）：紧盯夜间凌晨、居民区商圈，打击非法改装、飙车炸街、噪音扰民；市政府通告称飙车炸街依法顶格处理。</td></tr>
+      <tr><td>普宁市城区（主干道、商圈、居民区一带）</td><td>1</td><td>夜间（2026-11-04 深夜专项整治）</td><td>行政拘留无证飙车人员 7 名、打掉飙车炸街团伙 1 个，非法改装车辆责令恢复原状（揭阳新闻网发布普宁公安交管大队通报，一手来源）。该行动明确由群众举报线索驱动。</td></tr>
+      <tr><td>榕城区临江北路</td><td>1</td><td>深夜（据媒体条目文案）</td><td>媒体标题称交警已抓捕（「夜擒」「落网」），但无正文、无具体数字，日期不详（二手来源，未核实正文）。</td></tr>
+      <tr><td>榕城区老城区（居民区与商业混合区域）</td><td>1</td><td>夜间 21:00–凌晨 1–2 点（据居民反映条目）</td><td>无公开通报的处置记录。居民自述报警十余次、警方曾反馈抓获几名典型违法驾驶员，未见根本遏制（二手来源）。</td></tr>
+      <tr><td>普宁市里湖镇</td><td>1（线索级）</td><td>未公布</td><td>仅视频标题显示警方口径的处置内容，正文无法核验，无具体查处结果（线索级弱证据，不计入官方处置数）。</td></tr>
+      <tr><td>榕城区西湖公园附近</td><td>1</td><td>凌晨（2024-04-03 案发于凌晨）</td><td>9 人刑事拘留（广东省公安厅典型案例，一手来源）。该案为飙车致伤案，非单纯噪声扰民。</td></tr>
+      <tr><td>北河大桥一带（榕城区人和大道真理中学对面加油站周边，真理中学公交站周边）</td><td>—（无公开记录；当事人一手证据已存档）</td><td>每晚 21:00–次日 2:30（据当事人书面举报，几乎每晚）</td><td>无公开通报的处置记录。当事人已于 2026-11-02 以正式书面《陈述与举报》及 20 页《证据材料汇编》向交警支队、警务督察支队举报（抄送省公安厅，同步 12389/12388），属当事人一手证据而非公开报道，故本行不计入顶部计数与热力榜条数——本站计数只认有公开出处的条目；区别在此注明。因紧邻学校，已列入下方「怎么治」的优先管控靶点。投诉与回复全过程见「当事人自述」。</td></tr>
+      <tr><td>榕城区建阳路金城龙庭二期</td><td>—（线索）</td><td>半夜（网民评论）</td><td>无。来源为当事人 2026-10-26 抖音帖评论区网民留言（「半夜也有」），未核实，不计入统计。</td></tr>
+      <tr><td>揭阳大桥</td><td>—（线索）</td><td>凌晨 2–3 点（网民评论）</td><td>无。来源为同一评论区网民留言，未核实，不计入统计。</td></tr>
+      <tr><td>榕城区政务中心东湖路</td><td>—（线索）</td><td>未注明（网民评论称「更多」）</td><td>无。来源为同一评论区网民留言，未核实，不计入统计。</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="clue">
+  <h2>线索举报</h2>
+  <p class="secdesc">对照成都「蓉 e 行」线索举报功能（上线后报道时已收集线索 132 条）的做法：线索先行，逐条核实。本站不是受理机关，不接收、不转交线索；正式举报请走下方官方渠道。线索须经核实——有公开来源或可核验证据——才进入本站时间线。</p>
+  <div class="card">
+    <h3>一条合格的线索，四样齐全</h3>
+    <ul>
+      <li><strong>时间</strong>：具体日期与时段（如 2026-10-31 21:00–次日 01:30）；</li>
+      <li><strong>地点</strong>：到路段或区域（如榕城区老城区、西湖公园附近），不要写门牌住址；</li>
+      <li><strong>现象描述</strong>：发生了什么、频次如何、持续多久，只写事实；</li>
+      <li><strong>证据链接</strong>：公开视频、公开帖子或报道的链接。没有可核验证据的口头消息不入账。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>官方渠道（正式举报走这里）</h3>
+    <dl class="kv">
+      <dt>110</dt><dd>夜间正在发生的炸街扰民、飙车竞速，直接报警。</dd>
+      <dt>122</dt><dd>交通违法举报电话，反映聚集炸街的时间、地点。</dd>
+      <dt>12345</dt><dd>政务服务热线，投诉工单留痕，可要求反馈处理结果。</dd>
+      <dt>举报邮箱</dt><dd>揭阳交警交通违法举报邮箱：0663_JYJJ@163.com（南方+ 于 2022 年公布；本站未实测其现时有效性，发送后请留意退信，并保留工单渠道并行反映）。</dd>
+    </dl>
+    <p style="margin-top:8px">除上述邮箱外，揭阳本地未查到交警部门公布的炸街专用举报专线，全国通用渠道同样适用。</p>
+  </div>
+  <div class="card">
+    <h3>线索模板（复制后填写）</h3>
+    <pre class="tpl" id="clueTpl">【炸街线索】
+时间：
+地点（路段/区域）：
+现象（频次、持续时长）：
+证据链接（公开视频/帖子/报道链接）：</pre>
+    <button class="cpbtn" type="button" onclick="var t=document.getElementById('clueTpl');if(navigator.clipboard){navigator.clipboard.writeText(t.innerText);}this.textContent='已复制，去 12345 / 110 / 122 提交';">复制模板</button>
+    <p style="margin-top:8px">填好后经 110 / 122 / 12345 提交；若已公开发布，把链接留作证据来源，核实后可进入本站时间线。</p>
+  </div>
+</section>
+
+<section id="ref">
+  <h2>各地做法参考</h2>
+  <p class="secdesc">从公开通报提炼的渠道、标准与条款，供举报与对照参考（完整调研与出处见站外文档，此处只放结论）。</p>
+
+  <div class="card">
+    <h3>举报渠道（全国通用）</h3>
+    <dl class="kv">
+      <dt>110</dt><dd>夜间正在发生的炸街扰民、飙车竞速，直接报警。</dd>
+      <dt>122</dt><dd>交通违法举报电话，反映聚集炸街的时间、地点。</dd>
+      <dt>12345</dt><dd>政务服务热线，投诉工单留痕，可要求反馈处理结果。</dd>
+      <dt>取证要点</dt><dd>拍视频留时间地点；记录频次与时段（如每晚 21:00–凌晨 2:00）；多人多日记录比单次投诉更能触发专项勤务（西安等地即按投诉数据定路段、定勤务）。</dd>
+    </dl>
+  </div>
+
+  <div class="card">
+    <h3>噪音标准（对照口径）</h3>
+    <ul>
+      <li>《声环境质量标准》（GB 3096-2008）：居民住宅 1 类区夜间 ≤45 分贝，2 类区夜间 ≤50 分贝。</li>
+      <li>官方实测对照：西安交警通告称 400CC 及以上摩托车加速噪声最大值超过 100 分贝。</li>
+      <li>车辆定型标准：《摩托车和轻便摩托车加速行驶噪声限值及测量方法》（GB 16169-2005）；排放标准：《摩托车污染物排放限值及测量方法（中国第四阶段）》（GB 14622-2016）——拆改消声器、破坏催化转化器即偏离定型状态，年检外观与环保检测均过不了。</li>
+      <li>注意：生态环境法典施行后，炸街噪声认定不再唯分贝论——轰鸣疾驶实际干扰他人正常生活即可认定，不必等现场测分贝。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>法律条款（现行处罚依据）</h3>
+    <ul>
+      <li>《生态环境法典》（2026-08-15 施行）第 576 条：禁止驾驶拆除或损坏消声器、加装排气管等擅自改装的机动车以轰鸣、疾驶等方式造成噪声污染。</li>
+      <li>《生态环境法典》第 1187 条：警告，200 元以上 2000 元以下罚款，可暂扣机动车驾驶证。（各地已开罚单多在 1000–2000 元：柳州 1600 元、韶关/梅州/聊城 2000 元、衡阳 1000 元。）</li>
+      <li>《道路交通安全法》第 16 条 + 《机动车登记规定》第 79 条：擅自改变机动车已登记结构、构造或特征，警告或 500 元以下罚款、责令恢复原状；与法典处罚可分别裁量、合并执行。</li>
+      <li>伴随超速、追逐竞驶、无证驾驶的，合并处罚；情节严重构成犯罪的，按危险驾驶罪等追究刑事责任（广东 2024 年专项行动：查处团伙 268 个、刑拘 89 人、治安拘留 501 人）。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>其他城市怎么做（可借鉴）</h3>
+    <ul>
+      <li>西安：以投诉定路段、以数据定勤务；投诉集中路段 22:00–次日 6:00 对 400CC 及以上摩托车分时管控；声呐监测、无人机、视频卡口锁定轰鸣声纹（2026 年 9 月以来查获炸街车 402 辆）。</li>
+      <li>成都：「蓉 e 行」平台上线炸街线索举报功能；绘制噪声扰民热力图（重点区域、重点路段）；对易发车辆建台账、突击检查改装门店溯源。</li>
+      <li>菏泽：「1234」全链条工作法，累计查处 1.82 万起、捣毁改装窝点 16 处、查扣 8774 辆——路面查处与源头窝点一起打。</li>
+      <li>多地交警设「违法曝光台」：以条目卡片持续公布查处案例（时间/地点/违法情形/处罚结果）+ 法条链接 + 交警提醒。本站借鉴其版式，但只记事件与处置，不公布个人姓名与车牌。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="playbook">
+  <h2>怎么治 · 给当地的打法</h2>
+  <p class="secdesc">以下打法全部对标已见效的外地先例（每条标注学谁），落到揭阳本站已记录的靶点上。完整建议稿（致交警支队/属地政府）见站外文档 playbook.md。</p>
+
+  <div class="card">
+    <h3>八个动作</h3>
+    <ul>
+      <li><strong>投诉定路段、定勤务【西安】</strong>：汇总 110 / 122 / 12345 投诉数据，每月圈定投诉集中路段与时段，勤务跟着投诉走，不再等媒体曝光才动。</li>
+      <li><strong>开线索举报入口【成都】</strong>：在交警公众号或政务平台开「飙车炸街」线索专口，按时间、地点、现象、证据四要素征集——成都「蓉 e 行」上线后报道时已收线索 132 条。</li>
+      <li><strong>建噪声热力图【成都】</strong>：投诉逐案标注成图，公开重点区域与重点路段；本站热力榜已按公开记录起底，可作对照。</li>
+      <li><strong>建台账【成都】</strong>：易发车辆台账＋重点路段台账双轨管理，台账路段优先布控、季度更新。</li>
+      <li><strong>改装门店突击检查溯源【成都 · 广东专项】</strong>：路面查车之外，突击检查改装门店、捣毁改装窝点，从源头断供给（广东 2024 年专项查处团伙 268 个；菏泽捣毁窝点 16 处）。</li>
+      <li><strong>重点时段设卡【西安 · 普宁】</strong>：22:00–次日 6:00 在靶点路段定点设卡＋流动巡查——普宁 2026-11-04 正是这样打的：举报驱动、深夜设卡，行拘 7 人、打掉团伙 1 个。</li>
+      <li><strong>大排量分时禁行【西安】</strong>：投诉集中路段夜间禁止 400CC 及以上摩托车通行（可办临时通行证），与居民区夜间 ≤45–50 分贝的标准对齐。</li>
+      <li><strong>法典罚单顶格震慑＋曝光台【柳州 · 韶关 · 梅州 · 聊城／各地交警】</strong>：依《生态环境法典》第 1187 条对轰鸣疾驶顶格罚 2000 元、可暂扣驾驶证，不再只按改装罚 500 元；查处案例上「违法曝光台」持续公示（时间/地点/违法/处罚）。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>靶点（只用本站已记录的地点与时段）</h3>
+    <ul>
+      <li><strong>榕城区老城区</strong>：居民反映 21:00–凌晨 1–2 点高频炸街、报警十余次未根治——设卡应从 21:00 起布控（早于西安 22:00 的口径），列为投诉定勤务的首批试点。</li>
+      <li><strong>榕城区临江北路</strong>：媒体已点名「鬼火少年」深夜出没——夜间巡逻＋路段两端卡口，视频卡口回溯取证；同时补录该案原始通报，把二手记录升级为一手。</li>
+      <li><strong>北河大桥一带（真理中学对面）</strong>：已有当事人一手证据的重点点位（2026-11-02 正式书面举报及证据汇编，时段 21:00–次日 2:30；尚无公开通报）——紧邻学校，夜间飙车炸街不只是扰民，还涉及学生与周边住户安全，建议列为学校周边重点管控点位：桥面两端布控、设卡与巡逻优先，先行纳入巡逻必经点。</li>
+      <li><strong>榕城区西湖公园附近</strong>：2024 年飙车致伤刑案发生地——保留凌晨时段巡逻与卡口，防回潮。</li>
+      <li><strong>普宁市城区与里湖镇</strong>：城区 11-04 模式（举报驱动＋深夜设卡）常态化并向各县区推广、战果公示；里湖镇纳入乡镇一级摸排，核实 2024 年历史线索。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>闭环要求：投诉必须有回音</h3>
+    <p>本站两轮检索（人民网领导留言板、揭阳 12345 公开答复、网上信访公开办理结果）均未找到揭阳炸街投诉与官方正式答复的配对公开记录。建议：投诉工单办结结果公开答复、整治数据（查处量、罚单量、拘留数）每月公示、热力图与台账季度更新——投诉有回音，举报才有下一批。</p>
+  </div>
+</section>
+
+<section id="howto">
+  <h2>记录方法</h2>
+  <div class="card">
+    <p>本站只收录可核验的公开记录。一条合格的记录需要四样东西：</p>
+    <ul>
+      <li><strong>时间</strong>：具体日期，最好带时段（如 2026-10-31 21:00–次日 01:30）；</li>
+      <li><strong>地点</strong>：到路段或区域即可（如榕城区老城区、西湖公园附近），不需要也不要写门牌住址；</li>
+      <li><strong>现象描述</strong>：发生了什么、频次如何、持续多久，只写事实，不写猜测；</li>
+      <li><strong>证据链接</strong>：公开报道、官方通报或公开帖子的链接。没有链接的口头消息不入账。</li>
+    </ul>
+    <p style="margin-top:8px">官方处置类记录只采用交警/公安通报与媒体公开报道，并注明来源层级（一手通报 / 媒体转引）。本站为静态记录页，暂不设在线投稿表单；发现公开报道有误，可对照原文链接自行核验。</p>
+  </div>
+</section>
+
+<footer>
+  揭阳炸街广场 · 公共记录与治理参考页<br>
+  本站不隶属任何政府部门；不收录未经核实的车牌、人名与个人住址；所有数字均来自页面条目及其出处。<br>
+  数据截至 2026-11-27（已合并第二轮深挖条目与当事人证据卷宗：新增 2026-10-26 全市专项部署；北河大桥点位已凭当事人一手证据升级，仍按口径不计入公开记录计数）。
+</footer>
+
+</div>
+
+<script>
+var RECORDS = [
+  {
+    date: "2026-11-04",
+    type: "处置",
+    place: "普宁市城区主干道、商圈及居民聚居区一带",
+    title: "普宁深夜专项整治：行政拘留无证飙车人员 7 名，打掉飙车炸街团伙 1 个",
+    desc: "普宁市公安局交管大队组织打击「飙车炸街」专项整治行动：依据前期摸排及群众举报线索研判高发时段与重点路段，在城区主干道、商圈周边及居民聚居区采取「定点设卡＋流动巡查」，重点查处非法改装排气管、擅自改变车辆外形、无牌无证、超速竞驶，查获的非法改装车辆责令恢复原状。行动共行政拘留无证飙车人员 7 名，打掉飙车炸街团伙 1 个；通报称下一步将常态化巡查整治、畅通群众举报渠道。",
+    srcName: "揭阳新闻网《深夜「炸街」扰民 普宁公安出手整治》（普宁市公安局交管大队通报，一手来源；行动日期以通报正文为准）",
+    srcUrl: "https://www.jynews.net/newsWeb/toDetail?desId=249769"
+  },
+  {
+    date: "2026-10-31",
+    type: "事件",
+    place: "榕城区老城区（居民区与商业混合区域）",
+    title: "居民公开反映：夜间炸街高频扰民，报警十余次未根治",
+    desc: "据报道，榕城区老城区一名居民经社交平台反映，该区域每晚约 21:00 至凌晨 1–2 点频繁发生摩托车「炸街」，几分钟便有一次巨响，严重影响居民休息；反映人自述已报警超过十次，警方曾反馈抓获几名典型违法驾驶员，但扰民未见根本遏制。报道同时指出，当时尚无公开信息显示相关部门就此作出进一步处置。",
+    srcName: "唐人日报 2026-11-02（转引搜狐新闻报道，二手来源）",
+    srcUrl: "https://trrb.net/hot-headlines/li-teacher-x-2117154743101313488"
+  },
+  {
+    date: "2026-10-26",
+    type: "反馈",
+    place: "揭阳市（全市部署，无具体路段）",
+    title: "揭阳交警发布道路交通秩序「严管严控三个月」专项行动部署",
+    desc: "2026 年 10 月 26 日，揭阳交警发布道路交通秩序「严管严控三个月」专项行动：紧盯夜间、凌晨违法高发时段，针对居民区、商圈周边强化巡逻管控，重拳打击无证驾驶、非法改装、飙车炸街、噪音扰民等突出违法。揭阳市人民政府《交通整治专项行动通告》亦明确，对在道路上飙车炸街的依法顶格处理，涉嫌违法犯罪的依法追究。本条为部署类官方反馈，非具体查处结果——部署与基层接处警落实之间的落差，正是本站持续记录的原因之一（见「当事人自述」）。",
+    srcName: "网易转载揭阳交警发布（2026-10-26，一手官方内容经转载）；揭阳市人民政府网《交通整治专项行动通告》",
+    srcUrl: "https://c.m.163.com/news/a/LA5NMAU104179HUU.html"
+  },
+  {
+    date: "2026-10-23",
+    type: "处置",
+    place: "揭阳市（具体路段未公布）",
+    title: "交警查获无证驾驶及非法改装「炸街」摩托车案，行政拘留",
+    desc: "据报道，10 月 23 日揭阳交警查获一起无证驾驶及非法改装「炸街」摩托车案件，依法对涉事人员作出行政拘留处罚。",
+    srcName: "唐人日报 2026-11-02（转引相关报道，二手来源；未检索到揭阳交警原始通报）",
+    srcUrl: "https://trrb.net/hot-headlines/li-teacher-x-2117154743101313488"
+  },
+  {
+    date: "2026-10-21",
+    type: "反馈",
+    place: "揭阳市",
+    title: "公安交管部门开展「俱乐部座谈 + 门店走访」双线宣传",
+    desc: "据报道，10 月 21 日揭阳市公安交管部门联合多个单位开展宣传活动，走访摩托车俱乐部与改装门店，重点整治飙车竞速、翘头炫技及非法改装等违法行为，属源头治理类官方反馈。",
+    srcName: "唐人日报 2026-11-02（转引相关报道，二手来源）",
+    srcUrl: "https://trrb.net/hot-headlines/li-teacher-x-2117154743101313488"
+  },
+  {
+    date: "2026-10-16",
+    type: "处置",
+    place: "揭阳市（具体路段未公布）",
+    title: "交警查获无证驾驶及非法改装「炸街」摩托车案，行政拘留",
+    desc: "据报道，10 月 16 日揭阳交警查获一起无证驾驶及非法改装「炸街」摩托车案件，依法对涉事人员作出行政拘留处罚。",
+    srcName: "唐人日报 2026-11-02（转引相关报道，二手来源；未检索到揭阳交警原始通报）",
+    srcUrl: "https://trrb.net/hot-headlines/li-teacher-x-2117154743101313488"
+  },
+  {
+    date: "2024-04-03",
+    type: "处置",
+    place: "榕城区西湖公园附近",
+    title: "摩托车「飙车」追赶致人受伤案，9 人被刑事拘留",
+    desc: "广东省公安厅公布的典型案例：2024 年 4 月 3 日凌晨，9 人驾驶摩托车在西湖公园附近「飙车」，追赶两名电动自行车骑行者并致其倒地受伤；揭阳公安机关于 4 月 7 日公布查处结果，9 人被刑事拘留。（该案为飙车类案件，非单纯噪声扰民，收录为本地同类治理记录。）",
+    srcName: "广东省人民政府门户网站（广东省公安厅典型案例，2024-08）；南方都市报 2024-08-28",
+    srcUrl: "http://www.gd.gov.cn/gdywdt/zfjg/content/post_4484314.html"
+  },
+  {
+    date: "2024-04-18",
+    type: "线索",
+    place: "普宁市里湖镇",
+    title: "视频线索：普宁里湖有人飙车炸街？揭阳警方：盘他！（仅标题可考）",
+    desc: "哔哩哔哩检索结果中存有一条已注销账号于 2024 年 4 月 18 日转载的视频，标题为《普宁里湖有人飙车炸街？揭阳警方：盘他！》。标题显示内容源自「揭阳警方」口径，指向 2024 年 4 月前后普宁里湖一带有飙车炸街现象及警方处置；但原视频账号已注销，正文无法打开核验，无具体查处人数与结果。本条按线索级弱证据收录，不计入官方处置数。",
+    srcName: "哔哩哔哩搜索索引（二手来源，线索级：仅标题可考，正文无法核验）",
+    srcUrl: "https://search.bilibili.com/zh-Hans/all?keyword=普宁里湖有人飙车炸街"
+  },
+  {
+    date: "日期不详",
+    type: "事件",
+    place: "榕城区临江北路",
+    title: "媒体点名：临江北路「鬼火少年」深夜出没扰民（日期不详）",
+    desc: "新浪广东《潮新早报》栏目刊有条目《揭阳交警夜擒飙车党，飙车鬼火少年落网》，题下文案称：最近，临江北路有一群「鬼火少年」深夜出没，所到之处严重扰民。标题显示交警已采取抓捕行动，但可检索到的页面只有标题与一句文案，无正文、无日期、无具体查处数字，多次检索未能定位原始报道。本条只能确认临江北路曾被本地媒体点名为深夜扰民路段，发生时间不详，引用时必须保留此标注。",
+    srcName: "新浪广东·潮新早报专题页（二手来源，日期不详、无正文可核）",
+    srcUrl: "https://gd.sina.cn/shantou/zt_d/cxzb?wm=3049_0016&from=qudao"
+  }
+];
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;");}
+function evHtml(r){
+  return '<article class="ev t-'+r.type+'">'
+    + '<div class="meta"><span>'+r.date+'</span><span class="tag '+r.type+'">'+r.type+'</span><span>'+esc(r.place)+'</span></div>'
+    + '<h3>'+esc(r.title)+'</h3>'
+    + '<p>'+esc(r.desc)+'</p>'
+    + '<p class="src">来源：<a href="'+r.srcUrl+'" target="_blank" rel="noopener">'+esc(r.srcName)+'</a></p>'
+    + '</article>';
+}
+var tl = document.getElementById("timelineList");
+tl.innerHTML = RECORDS.map(evHtml).join("");
+var acts = RECORDS.filter(function(r){return r.type==="处置"||r.type==="反馈";});
+document.getElementById("actionList").innerHTML = acts.map(evHtml).join("");
+document.getElementById("cEvents").textContent = RECORDS.length;
+document.getElementById("cActions").textContent = RECORDS.filter(function(r){return r.type==="处置";}).length;
+</script>
+</body>
+</html>
